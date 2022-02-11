@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".detailView">
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="113dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="33dp"
+        android:text="LONGITUDE"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="113dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="29dp"
+        android:text="LATITUDE"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="113dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="46dp"
+        android:text="PRICE"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvpdesc" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="113dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="45dp"
+        android:text="NAME"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/tvpPrice"
+        android:layout_width="113dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="111dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvpdesc" />
+
+    <TextView
+        android:id="@+id/tvpLati"
+        android:layout_width="113dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="100dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvpPrice" />
+
+    <TextView
+        android:id="@+id/tvpLongi"
+        android:layout_width="113dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="100dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvpLati" />
+
+    <TextView
+        android:id="@+id/tvPname"
+        android:layout_width="113dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="111dp"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/tvpdesc"
+        android:layout_width="197dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <TextView
+        android:id="@+id/tvpid"
+        android:layout_width="113dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="111dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPname" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="167dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="17dp"
+        android:text="DETAIL VIEW"
+        android:textAlignment="center"
+        android:textColor="#DA1E1E"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="113dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="167dp"
+        android:text="DESCRIPTION"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvpid" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="113dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="36dp"
+        android:text="ID "
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+</androidx.constraintlayout.widget.ConstraintLayout>
