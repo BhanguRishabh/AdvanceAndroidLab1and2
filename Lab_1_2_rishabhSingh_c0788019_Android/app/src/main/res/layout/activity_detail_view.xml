@@ -10,10 +10,11 @@
         android:id="@+id/textView18"
         android:layout_width="113dp"
         android:layout_height="25dp"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="33dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
         android:text="LONGITUDE"
-        android:textAlignment="center"
+        android:textAlignment="viewStart"
+        android:textColor="#070707"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,10 +24,11 @@
         android:id="@+id/textView17"
         android:layout_width="113dp"
         android:layout_height="25dp"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="29dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
         android:text="LATITUDE"
-        android:textAlignment="center"
+        android:textAlignment="viewStart"
+        android:textColor="#070707"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,14 +38,15 @@
         android:id="@+id/textView16"
         android:layout_width="113dp"
         android:layout_height="25dp"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="46dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
         android:text="PRICE"
-        android:textAlignment="center"
+        android:textAlignment="viewStart"
+        android:textColor="#070707"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvpdesc" />
+        app:layout_constraintTop_toBottomOf="@+id/atxtDesc" />
 
     <TextView
         android:id="@+id/textView15"
@@ -52,88 +55,25 @@
         android:layout_marginStart="38dp"
         android:layout_marginTop="45dp"
         android:text="NAME"
-        android:textAlignment="center"
+        android:textAlignment="viewStart"
+        android:textColor="#090909"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
-
-    <TextView
-        android:id="@+id/tvpPrice"
-        android:layout_width="113dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="46dp"
-        android:layout_marginEnd="111dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvpdesc" />
-
-    <TextView
-        android:id="@+id/tvpLati"
-        android:layout_width="113dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="29dp"
-        android:layout_marginEnd="100dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvpPrice" />
-
-    <TextView
-        android:id="@+id/tvpLongi"
-        android:layout_width="113dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="33dp"
-        android:layout_marginEnd="100dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvpLati" />
-
-    <TextView
-        android:id="@+id/tvPname"
-        android:layout_width="113dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="45dp"
-        android:layout_marginEnd="111dp"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
-
-    <TextView
-        android:id="@+id/tvpdesc"
-        android:layout_width="197dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="82dp"
-        android:layout_marginTop="20dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
     <TextView
         android:id="@+id/tvpid"
         android:layout_width="113dp"
         android:layout_height="25dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="26dp"
         android:layout_marginEnd="111dp"
         android:text="TextView"
         android:textAlignment="center"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvPname" />
+        app:layout_constraintTop_toBottomOf="@+id/etxtDname" />
 
     <TextView
         android:id="@+id/textView10"
@@ -153,13 +93,14 @@
         android:id="@+id/textView13"
         android:layout_width="113dp"
         android:layout_height="25dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="167dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="40dp"
         android:text="DESCRIPTION"
         android:textAlignment="center"
+        android:textColor="#070707"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvpid" />
 
     <TextView
@@ -169,9 +110,119 @@
         android:layout_marginStart="38dp"
         android:layout_marginTop="36dp"
         android:text="ID "
-        android:textAlignment="center"
+        android:textAlignment="viewStart"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+        app:layout_constraintTop_toBottomOf="@+id/textView15"
+        android:textColor="#070707" />
+
+    <EditText
+        android:id="@+id/etxtDname"
+        android:layout_width="210dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="14dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <AutoCompleteTextView
+        android:id="@+id/atxtDesc"
+        android:layout_width="238dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="106dp"
+        android:text="AutoCompleteTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <EditText
+        android:id="@+id/etxtDlati"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="124dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxtDprice" />
+
+    <EditText
+        android:id="@+id/etxtDprice"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="152dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/atxtDesc" />
+
+    <EditText
+        android:id="@+id/etxtDLongi"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="124dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxtDlati" />
+
+    <Button
+        android:id="@+id/btUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:layout_marginBottom="52dp"
+        android:text="UPDATE"
+        app:icon="@android:drawable/ic_popup_sync"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ibtMap"
+        android:layout_width="87dp"
+        android:layout_height="78dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="208dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/map" />
+
+    <Button
+        android:id="@+id/btBacktoMain2"
+        android:layout_width="82dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="5dp"
+
+
+        android:backgroundTint="#F4F1F1"
+        android:text="BACK"
+        android:textColor="#050A5A"
+        android:textColorHint="#38219A"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ibtDelete"
+        android:layout_width="67dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="14dp"
+        android:background="#F8F4F4"
+        android:foregroundTint="#C82222"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

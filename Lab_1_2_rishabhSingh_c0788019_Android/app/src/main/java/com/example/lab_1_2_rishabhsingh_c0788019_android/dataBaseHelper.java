@@ -36,6 +36,7 @@ public class dataBaseHelper  extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
+
     }
     public Boolean addData(productsModelClass prod){
         SQLiteDatabase db = this.getWritableDatabase();
@@ -80,11 +81,27 @@ public class dataBaseHelper  extends SQLiteOpenHelper {
         }
         return returnList;
     }
+    public void updateRow(productsModelClass prod){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put(PRODUCT_NAME,prod.getName());
+        cv.put(PRODUCT_DESCRIPTION,prod.getDescription());
+        cv.put(PRODUCT_PRICE,prod.getPrice());
+        cv.put(LATITUDE,prod.getLatitude());
+        cv.put(LONGITUDE,prod.getLongitude());
+        db.update(PRODUCT_TABLE,cv,PRODUCT_ID + "="+prod.getId(),null);
+    }
+
 
     public void deleteAll(){
         SQLiteDatabase db = this.getReadableDatabase();
-        db.execSQL("DELETE FROM "+ PRODUCT_TABLE);
+        db.delete(PRODUCT_TABLE, null, null);
 
+    }
+
+    public void deleteRow(int id){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(PRODUCT_TABLE,PRODUCT_ID + "="+id,null);
     }
 
 

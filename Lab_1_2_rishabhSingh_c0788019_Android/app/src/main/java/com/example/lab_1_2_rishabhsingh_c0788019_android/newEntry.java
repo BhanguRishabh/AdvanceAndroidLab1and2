@@ -10,12 +10,15 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class newEntry extends AppCompatActivity {
     Button back ;
-    ImageButton save;
+    Button save;
     EditText name,desc,price,longi,lati;
-
-
+    //dataBaseHelper dbhelper = new dataBaseHelper(newEntry.this);
+    dataBaseHelper dbHelper = new dataBaseHelper(newEntry.this);
+    productsModelClass proModCls;
     MainActivity mainActivity;
 
 
@@ -24,12 +27,14 @@ public class newEntry extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_entry);
         back = findViewById(R.id.btBacktoMain);
-        save = findViewById(R.id.btSave);
+        save = findViewById(R.id.btsave);
         name = findViewById(R.id.etxtName);
         desc = findViewById(R.id.etxtDes);
         price = findViewById(R.id.etxtPrice);
         longi = findViewById(R.id.etxtLong);
         lati = findViewById(R.id.etxtLat);
+
+
 
 
 
@@ -41,44 +46,48 @@ public class newEntry extends AppCompatActivity {
 
             }
         });
+
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Double uLati = Double.parseDouble(lati.getText().toString());
+                Double uLongi = Double.parseDouble(longi.getText().toString());
 
-                productsModelClass  prdMdl = new productsModelClass(-1, "name", "viuhnbjg", 67.99, 67.99, 67.99);
-                dataBaseHelper dbhelper = new dataBaseHelper(newEntry.this);
+                if((uLati <= 90 && uLati >= -90 ) && (uLongi <= 180 && uLongi >= -180)){
 
-                Boolean aBoolean = dbhelper.addData(prdMdl);
-
-//              try {
-//
-//
-////                  prdMdl = new productsModelClass(-1, name.getText().toString(), desc.getText().toString(), Double.parseDouble(price.getText().toString()), Double.parseDouble(lati.getText().toString()), Double.parseDouble(longi.getText().toString()));
-//              }
-//
-//              catch(Exception e){
-//
-//                  prdMdl = new productsModelClass(-1,"error","error",0,0,0);
-//                  Toast.makeText(newEntry.this,"error",Toast.LENGTH_SHORT).show();}
+                try {
 
 
-               // Toast.makeText(newEntry.this,aBoolean.toString(),Toast.LENGTH_SHORT).show();
+                 proModCls = new productsModelClass(-1, name.getText().toString(), desc.getText().toString(), Double.parseDouble(price.getText().toString()), Double.parseDouble(lati.getText().toString()), Double.parseDouble(longi.getText().toString()));
+                    dbHelper.addData(proModCls);
+                   // --- moving to mainActivity
+                  Intent movetoMainScreen = new Intent(newEntry.this,MainActivity.class);
+                   startActivity(movetoMainScreen);
+           }
 
-               // mainActivity.loadTable();
+             catch(Exception e){
 
+                 Toast.makeText(newEntry.this,"All fields Manadtory",Toast.LENGTH_SHORT).show();} }
+                else {
+                    Toast.makeText(newEntry.this, "(Latitude range -90 to 90) && (Longitude range -180 to 180 )", Toast.LENGTH_SHORT).show();
+                }
 
-
-
-
-
-
-
-/// --- moving to mainActivity
-                Intent movetoMainScreen = new Intent(newEntry.this,MainActivity.class);
-                startActivity(movetoMainScreen);
 
             }
 
         });
+
+
+
+
+
+
+
     }
+
+
+
+
+
+
 }

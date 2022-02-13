@@ -17,8 +17,9 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     ListView allProductsTable;
-
+    static Boolean firstLauch = true;
     ImageButton addBt;
+
 
 
     dataBaseHelper dbHelper = new dataBaseHelper(MainActivity.this);
@@ -31,16 +32,27 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
        allProductsTable = findViewById(R.id.lvTable);
        addBt = findViewById(R.id.btMovetoadd);
-//dbHelper.deleteAll();
+
+
+
+        if(firstLauch){
+            firstLauch = false;
+            //dbHelper.deleteAll();
+            preFedData();
+
+
+
+        }
 
 
         allProductsTable.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(MainActivity.this,"click detected",Toast.LENGTH_SHORT).show();
-               int  index =  position;
+
                 Intent detailSCreen = new Intent(MainActivity.this,detailView.class);
-               // detailSCreen.putExtra("scr",index);
+                detailSCreen.putExtra("scr",position);
+
+
                 startActivity(detailSCreen);
             }
         });
@@ -56,8 +68,7 @@ public class MainActivity extends AppCompatActivity {
            }
        });
 
-      preFedData();
-     loadTable();
+       loadTable();
 
 
 
@@ -78,13 +89,14 @@ public class MainActivity extends AppCompatActivity {
         predefined.add(new productsModelClass(1,"TOOTH PASTE","oralhygiene",23.5,67,78));
         predefined.add(new productsModelClass(2,"PEPSI","soft drink",2.5,67,78));
         predefined.add(new productsModelClass(3,"ASPRIN","drug",35,-67,92));
-        predefined.add(new productsModelClass(4,"iPHONE","mobile phone",1200,89,20));
+        predefined.add(new productsModelClass(4,"iPHONE","mobile phone",1200,70,20));
         predefined.add(new productsModelClass(5,"BACKPACK","travelling gear",58.0,35,37));
         predefined.add(new productsModelClass(6,"AIRPODS","bluetooth earphones",350,78,42));
         predefined.add(new productsModelClass(7,"NOTEBOOK","Stationary",6.0,45,90));
         predefined.add(new productsModelClass(8,"CHAIR","furniture",90,23.5,78.9));
-        predefined.add(new productsModelClass(9,"JEANS","apparels",80,90,90));
-        predefined.add(new productsModelClass(10,"APPLE","fruit",1.5,99,88.80));
+        predefined.add(new productsModelClass(9,"JEANS","apparels",80,23,72));
+        predefined.add(new productsModelClass(10,"APPLE","fruit",1.5,80,88.80));
+
 
 
 

@@ -10,6 +10,7 @@
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:foregroundTint="#5E4B4B"
         tools:context=".newEntry">
 
         <EditText
@@ -127,7 +128,7 @@
             android:layout_marginStart="45dp"
             android:layout_marginTop="20dp"
             android:ems="10"
-            android:inputType="numberDecimal"
+            android:inputType="numberSigned|numberDecimal"
             app:layout_constraintStart_toEndOf="@+id/textView12"
             app:layout_constraintTop_toBottomOf="@+id/etxtLat" />
 
@@ -138,7 +139,7 @@
             android:layout_marginStart="45dp"
             android:layout_marginTop="45dp"
             android:ems="10"
-            android:inputType="numberDecimal"
+            android:inputType="numberSigned|numberDecimal"
             app:layout_constraintStart_toEndOf="@+id/textView11"
             app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
@@ -155,17 +156,6 @@
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/etxtDes" />
-
-        <ImageButton
-            android:id="@+id/btSave"
-            android:layout_width="63dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="140dp"
-            android:layout_marginTop="28dp"
-            android:backgroundTint="#8A6060"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView12"
-            app:srcCompat="@android:drawable/ic_menu_save" />
 
         <TextView
             android:id="@+id/textView6"
@@ -194,6 +184,18 @@
             android:textSize="10sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btsave"
+            android:layout_width="67dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="152dp"
+            android:layout_marginBottom="48dp"
+
+            app:icon="@android:drawable/ic_menu_save"
+            app:iconTint="#E81010"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
