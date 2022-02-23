@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -50,29 +51,36 @@ public class newEntry extends AppCompatActivity {
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Double uLati = Double.parseDouble(lati.getText().toString());
-                Double uLongi = Double.parseDouble(longi.getText().toString());
 
-                if((uLati <= 90 && uLati >= -90 ) && (uLongi <= 180 && uLongi >= -180)){
-
-                try {
+                if (isEmpty()){
 
 
-                 proModCls = new productsModelClass(-1, name.getText().toString(), desc.getText().toString(), Double.parseDouble(price.getText().toString()), Double.parseDouble(lati.getText().toString()), Double.parseDouble(longi.getText().toString()));
-                    dbHelper.addData(proModCls);
-                   // --- moving to mainActivity
-                  Intent movetoMainScreen = new Intent(newEntry.this,MainActivity.class);
-                   startActivity(movetoMainScreen);
-           }
+                    Double uLati = Double.parseDouble(lati.getText().toString());
+                    Double uLongi = Double.parseDouble(longi.getText().toString());
 
-             catch(Exception e){
+                    if((uLati <= 90 && uLati >= -90 ) && (uLongi <= 180 && uLongi >= -180)){
+
+                        try {
 
 
-                 Toast.makeText(newEntry.this,"All fields Manadtory",Toast.LENGTH_SHORT).show();} }
-                else {
-                    Toast.makeText(newEntry.this, "(Latitude range -90 to 90) && (Longitude range -180 to 180 )", Toast.LENGTH_SHORT).show();
+                            proModCls = new productsModelClass(-1, name.getText().toString(), desc.getText().toString(), Double.parseDouble(price.getText().toString()), Double.parseDouble(lati.getText().toString()), Double.parseDouble(longi.getText().toString()));
+                            dbHelper.addData(proModCls);
+                            // --- moving to mainActivity
+                            Intent movetoMainScreen = new Intent(newEntry.this,MainActivity.class);
+                            startActivity(movetoMainScreen);
+                        }
+
+                        catch(Exception e){
+
+
+                            Toast.makeText(newEntry.this,"error while saving data",Toast.LENGTH_SHORT).show();} }
+                    else {
+                        Toast.makeText(newEntry.this, "(Latitude range -90 to 90) && (Longitude range -180 to 180 )", Toast.LENGTH_SHORT).show();
+                    }
+
+
                 }
-
+                else{ Toast.makeText(newEntry.this,"All fields Manadtory",Toast.LENGTH_SHORT).show(); }
 
             }
 
@@ -84,8 +92,20 @@ public class newEntry extends AppCompatActivity {
 
 
 
-    }
 
+
+
+
+
+
+
+    }
+public Boolean isEmpty(){
+    if(TextUtils.isEmpty(name.getText().toString()) && TextUtils.isEmpty(desc.getText().toString()) && TextUtils.isEmpty(price.getText().toString())  && TextUtils.isEmpty(lati.getText().toString()) && TextUtils.isEmpty(longi.getText().toString()))
+        return true;
+
+
+  return false; }
 
 
 
