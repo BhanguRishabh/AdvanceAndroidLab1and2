@@ -67,6 +67,7 @@ public class newEntry extends AppCompatActivity {
 
              catch(Exception e){
 
+
                  Toast.makeText(newEntry.this,"All fields Manadtory",Toast.LENGTH_SHORT).show();} }
                 else {
                     Toast.makeText(newEntry.this, "(Latitude range -90 to 90) && (Longitude range -180 to 180 )", Toast.LENGTH_SHORT).show();
