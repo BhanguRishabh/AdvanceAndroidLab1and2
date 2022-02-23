@@ -52,7 +52,7 @@ public class newEntry extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (true){
+
 
 
                     Double uLati = Double.parseDouble(lati.getText().toString());
@@ -79,8 +79,7 @@ public class newEntry extends AppCompatActivity {
                     }
 
 
-                }
-                else{ Toast.makeText(newEntry.this,"All fields Manadtory",Toast.LENGTH_SHORT).show(); }
+
 
             }
 
