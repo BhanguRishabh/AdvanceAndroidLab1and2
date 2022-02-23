@@ -52,7 +52,7 @@ public class newEntry extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (isEmpty()){
+                if (true){
 
 
                     Double uLati = Double.parseDouble(lati.getText().toString());
